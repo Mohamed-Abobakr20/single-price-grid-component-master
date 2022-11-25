@@ -1,0 +1,139 @@
+/*Font Style*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/*General Style*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--Light-Gray);
+    margin: 30px;
+}
+
+h3,
+h4 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+/*Container Style*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 15px;
+    max-width: 600px;
+}
+
+
+/*Cards Style*/
+
+.container .card {
+    padding: 25px;
+    background-color: var(--Cyan);
+}
+
+.container .card1 {
+    background-color: white;
+}
+
+.container .card1 h3 {
+    color: var(--Cyan);
+}
+
+.container .card1 h4 {
+    color: var(--Bright-Yellow);
+}
+
+.container .card1 p {
+    color: var(--Grayish-Blue);
+}
+
+.container .card2 h3,
+.container .card3 h3 {
+    color: white;
+}
+
+.container .card2 p:nth-child(2) {
+    color: var(--Light-Gray);
+}
+
+.container .card2 p:nth-child(3) {
+    color: white;
+}
+
+.container .card2 p span {
+    color: white;
+    vertical-align: middle;
+    font-size: 35px;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.container .card3 {
+    background-color: #4abebd;
+}
+
+.container .card3 p {
+    color: var(--Light-Gray);
+}
+
+.container button {
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 5px;
+    background-color: var(--Bright-Yellow);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+/*Desktop Style*/
+
+@media screen and (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .container .card1 {
+        width: 100%;
+    }
+    .container .card2 {
+        width: 50%;
+    }
+    .container .card3 {
+        width: 50%;
+    }
+}
